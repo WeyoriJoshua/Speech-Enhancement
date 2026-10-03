@@ -1,0 +1,7 @@
+model,checkpoint,checkpoint_epoch,inference_params,cases,median_rtf,protocol
+A0,D:\PAPERS\SPEECH\low_snr_speech_enhancement\outputs\a0_voicebank\best.pt,53,1811729,18340,0.01272854309536385,chunked_2.56s_overlap_0.64s
+A1,D:\PAPERS\SPEECH\low_snr_speech_enhancement\outputs\a1_phaseaware_controlled\best.pt,13,1811763,18340,0.012649100707491801,chunked_2.56s_overlap_0.64s
+A2,D:\PAPERS\SPEECH\low_snr_speech_enhancement\outputs\a2_contextual_phaseaware\best.pt,62,2407604,18340,0.013806086728249251,chunked_2.56s_overlap_0.64s
+A3,D:\PAPERS\SPEECH\low_snr_speech_enhancement\outputs\a3_snr_conditioned\best.pt,86,2456725,18340,0.01436586536396685,chunked_2.56s_overlap_0.64s
+A4,D:\PAPERS\SPEECH\low_snr_speech_enhancement\outputs\a4_fixed_adversarial\best.pt,95,2456725,18340,0.0156945799155013,chunked_2.56s_overlap_0.64s
+A5,D:\PAPERS\SPEECH\low_snr_speech_enhancement\outputs\a5_snr_adaptive_adversarial\best.pt,58,2456725,18340,0.01508773703224745,chunked_2.56s_overlap_0.64s
