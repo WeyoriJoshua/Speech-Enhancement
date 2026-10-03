@@ -1,0 +1,36 @@
+{
+  "title": "Contextual Phase-Aware Speech Enhancement under Severe Noise and Distribution Shift: Reproducibility Package",
+  "upload_type": "software",
+  "description": "Reproducibility package for a controlled A0-A5 speech-enhancement ablation study evaluated on VoiceBank+DEMAND and an 18,340-case LibriSpeech+DNS external low-SNR stress test. The archival package contains publication notebooks, OOD evaluation utilities, derived results, and selected best checkpoints. Raw third-party speech/noise datasets are not redistributed.",
+  "creators": [
+    {
+      "name": "Weyori, Joshua Akowuje",
+      "orcid": "0009-0006-1526-6110",
+      "affiliation": "University of Energy and Natural Resources"
+    },
+    {
+      "name": "Sarpong, Richmond Ansah",
+      "affiliation": "University of Energy and Natural Resources"
+    },
+    {
+      "name": "Herson, Emmanuel Ayerko",
+      "affiliation": "University of Energy and Natural Resources"
+    }
+  ],
+  "version": "1.0.0",
+  "keywords": [
+    "speech enhancement",
+    "phase-aware enhancement",
+    "low SNR",
+    "out-of-distribution generalization",
+    "U-Net",
+    "adversarial learning"
+  ],
+  "related_identifiers": [
+    {
+      "identifier": "https://github.com/WeyoriJoshua/Speech-Enhancement",
+      "relation": "isSupplementTo",
+      "scheme": "url"
+    }
+  ]
+}
