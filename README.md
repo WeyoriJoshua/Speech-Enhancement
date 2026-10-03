@@ -1,30 +1,63 @@
 # Speech Enhancement at Low Signal-to-Noise Ratios
 
-Research code for deep-learning speech enhancement, including earlier TensorFlow U-Net/GAN experiments and a reproducible publication workflow for VoiceBank-DEMAND and LibriSpeech evaluation.
+Research code and reproducibility materials for deep-learning single-channel speech enhancement under severe noise and distribution shift.
 
-## Current notebook workflow
+## Current publication study
 
-Run the notebooks in numerical order:
+The current manuscript is:
 
-1. `00_Environment_Setup_and_Check_v2.ipynb`
-2. `01_Data_Manifests_and_LowSNR_Testset_v2.ipynb`
-3. `02_A0_UNet_Training_v2.ipynb`
-4. `03_A0_Evaluation_v2.ipynb`
-5. `04_A1_PhaseAware_UNet_Training.ipynb`
-6. `05_A1_PhaseAware_Evaluation.ipynb`
-7. `06_A0_vs_A1_Comparison.ipynb`
+**Contextual phase-aware speech enhancement under severe noise and distribution shift: A controlled ablation of signal-to-noise ratio conditioning and adversarial learning**
 
-The A0 workflow provides the baseline magnitude-mask U-Net. The A1 workflow adds phase-aware training and a direct A0-versus-A1 comparison.
+The study evaluates a controlled A0-A5 model family:
 
-## Data
+- **A0:** magnitude-only U-Net using the noisy phase.
+- **A1:** phase-aware U-Net.
+- **A2 / CPA-U-Net:** A1 plus dual-axis time-frequency contextual modeling; this is the principal model.
+- **A3:** A2 plus internal SNR estimation and FiLM conditioning.
+- **A4:** A3 plus fixed adversarial supervision.
+- **A5:** A4 plus estimated-SNR-adaptive adversarial weighting.
 
-Audio datasets are not committed. Configure local paths for:
+The external stress test uses all 2,620 LibriSpeech test-clean utterances mixed with Microsoft DNS Challenge noise at **-20, -15, -10, -5, 0, 5, and 10 dB**, producing **18,340 cases**.
 
-- VoiceBank-DEMAND (`DS_10283_2791`)
-- LibriSpeech `test-clean`
+Under the final uniform learned-system OOD protocol, inference is performed using **2.56 s chunks**, **0.64 s overlap**, **1.92 s hop**, and complementary linear crossfade overlap-add.
 
-Do not upload the datasets, virtual environment, or trained checkpoints directly to this repository.
+## Main completed result
 
-## Status
+A2 / CPA-U-Net is the strongest balanced model in the completed study. Relative to A0 over the full external 18,340-case analysis, A2 improves approximately:
 
-The notebooks are intended to run locally in VS Code/Jupyter with Python 3.11. Dataset paths must be set before manifest generation and training. This is active research code; metrics should only be reported from completed, verified runs.
+- PESQ: **+0.091**
+- STOI: **+0.045**
+- ESTOI: **+0.055**
+- SI-SDR: **+1.763 dB**
+- reference-relative SNR: **+0.905 dB**
+
+The extreme **-20 dB and -15 dB** conditions remain stress/failure regimes and are not presented as uniformly improved.
+
+## Publication reproducibility material
+
+See publication_2026/ for the publication protocol, derived summary results, data-availability notes, environment specification, and release manifest.
+
+A complete archival package containing the exact A0-A5 notebooks, OOD evaluation utilities, selected best checkpoints, and the case-level derived OOD results has been prepared for permanent deposit. The permanent DOI will be added here only after the exact versioned archive is published through an archival repository such as Zenodo.
+
+## Legacy notebooks
+
+Earlier TensorFlow U-Net/GAN experiments remain in the repository for provenance. They are not the complete implementation of the current A0-A5 publication study.
+
+## Third-party datasets
+
+Raw datasets are not redistributed. Obtain and configure local paths for:
+
+- VoiceBank+DEMAND
+- LibriSpeech test-clean
+- Microsoft DNS Challenge noise corpus
+
+## Citation
+
+See CITATION.cff.
+
+## Corresponding author
+
+Joshua Akowuje Weyori  
+Department of Computer Science and Informatics, School of Sciences  
+University of Energy and Natural Resources, Sunyani, Ghana  
+ORCID: https://orcid.org/0009-0006-1526-6110
