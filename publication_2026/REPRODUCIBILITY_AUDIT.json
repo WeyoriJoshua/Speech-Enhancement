@@ -1,0 +1,32 @@
+{
+  "manifest": "D:\\PAPERS\\SPEECH\\low_snr_speech_enhancement\\ood_librispeech_dns\\manifests\\librispeech_dns_ood_frozen.csv",
+  "manifest_sha256": "e829256b2dd9369e001221650f8efadc9a1aaa122984fbfd6ebd0e7f79adbd19",
+  "cases": 18340,
+  "unique_utterances": 2620,
+  "target_snrs_db": [-20, -15, -10, -5, 0, 5, 10],
+  "cases_per_snr": {
+    "-20.0": 2620,
+    "-15.0": 2620,
+    "-10.0": 2620,
+    "-5.0": 2620,
+    "0.0": 2620,
+    "5.0": 2620,
+    "10.0": 2620
+  },
+  "inference_protocol": {
+    "chunk_seconds": 2.56,
+    "overlap_seconds": 0.64,
+    "reconstruction": "linear cross-fade overlap-add"
+  },
+  "systems": {
+    "Noisy": {"sha256": "474619d2f2f143791cb5780994b3991d6e115d652ab44462d12fcfc8c9ed47a7", "rows": 18340, "unique_case_ids": 18340},
+    "A0": {"sha256": "1f9e27f2ddeec127d20dde7e2f8b85888de5dddb19f4b6eea315d2f56ef04390", "rows": 18340, "unique_case_ids": 18340},
+    "A1": {"sha256": "20361eab9b97d7580a7e2c8365c27a2180fc2fe5c0afa7c090abc43244f0a82c", "rows": 18340, "unique_case_ids": 18340},
+    "A2": {"sha256": "78ad348e72b0f3ac2f9f69daa98f041e33c427553b2a69dca41f789abb50604a", "rows": 18340, "unique_case_ids": 18340},
+    "A3": {"sha256": "5debc8c65b9043798d300b44ae14fdc18327dfc075aab3d0c9d13e2c279dcbf0", "rows": 18340, "unique_case_ids": 18340},
+    "A4": {"sha256": "b6399cb9eab20866065df8bf6d61fffb62f785a872083d0550550c30c00dd61a", "rows": 18340, "unique_case_ids": 18340},
+    "A5": {"sha256": "a5234a79611b22a211dbc02dbe1da41dc47902512eea38e3f8bdbcc27c638884", "rows": 18340, "unique_case_ids": 18340}
+  },
+  "mean_abs_realized_snr_error_db": 1.861154100783353e-07,
+  "max_abs_realized_snr_error_db": 6.398278120656187e-07
+}
