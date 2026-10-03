@@ -1,0 +1,15 @@
+cff-version: 1.2.0
+message: "If you use this code or derived data, please cite the associated paper and the archived software release."
+title: "Contextual Phase-Aware Speech Enhancement under Severe Noise and Distribution Shift: Reproducibility Materials"
+type: software
+authors:
+  - family-names: Weyori
+    given-names: Joshua Akowuje
+    orcid: "https://orcid.org/0009-0006-1526-6110"
+  - family-names: Sarpong
+    given-names: Richmond Ansah
+  - family-names: Herson
+    given-names: Emmanuel Ayerko
+repository-code: "https://github.com/WeyoriJoshua/Speech-Enhancement"
+version: "1.0.0"
+date-released: "2026-10-03"
